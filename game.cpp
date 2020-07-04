@@ -4,8 +4,9 @@
 
 using namespace std;
 
-int checkwin(char[]);
 void board(char[]);
+int checkwin(char[]);
+
 
 void board(char square[])
 {
@@ -85,7 +86,7 @@ int main()
         if (player == 2)
         {
             cout << "Players  " << player << endl;
-            cout << "Press Enter for CPU" << endl;
+            cout << "Press Enter For CPU's Move" << endl;
             choice = rand() % 9;
             mark = 'O';
             int turn = 1;
@@ -161,7 +162,7 @@ int main()
         // player 1
         else if (player == 1)
         {
-            cout << "Players  " << player << ", enter a number:  ";
+            cout << "Players  " << player << ", Enter A Number:  ";
             cin >> choice;
             mark = 'X';
 
@@ -194,7 +195,7 @@ int main()
                 square[9] = mark;
             else
             {
-                cout << "Invalid move ";
+                cout << "Invalid Move ";
 
                 player--;
                 _getche();
@@ -209,7 +210,7 @@ int main()
 
         cout << "Congratulation! \nPlayer " << --player << " win ";
     else
-        cout << "  OOps!\nGame draw";
+        cout << "  OOps! :/\nGame d\Draw";
 
     _getche();
 
