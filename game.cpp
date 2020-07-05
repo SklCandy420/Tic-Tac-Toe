@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #include <iostream>
 #include <conio.h>
 
@@ -6,7 +6,6 @@ using namespace std;
 
 void board(char[]);
 int checkwin(char[]);
-
 
 void board(char square[])
 {
@@ -85,13 +84,13 @@ int main()
         // player 2
         if (player == 2)
         {
-            cout << "Players  " << player << endl;
-            cout << "Press Enter For CPU's Move" << endl;
+            cout << "Player  " << player << endl;
+            cout << "Press Any Key For CPU's Move" << endl;
             choice = rand() % 9;
             mark = 'O';
             int turn = 1;
             int placed = 0;
-            while (placed == 0)
+            while (placed != 1)
             {
 
                 if (choice == 1 && square[1] == '1')
@@ -156,13 +155,12 @@ int main()
             i = checkwin(square);
             player++;
             _getche();
-            board(square);
         }
 
         // player 1
         else if (player == 1)
         {
-            cout << "Players  " << player << ", Enter A Number:  ";
+            cout << "Player  " << player << ", Enter A Number:  ";
             cin >> choice;
             mark = 'X';
 
@@ -196,7 +194,6 @@ int main()
             else
             {
                 cout << "Invalid Move ";
-
                 player--;
                 _getche();
             }
@@ -208,9 +205,9 @@ int main()
     board(square);
     if (i == 1)
 
-        cout << "Congratulation! \nPlayer " << --player << " win ";
+        cout << "Congratulations! \nPlayer " << --player << " You Won ";
     else
-        cout << "  OOps! :/\nGame d\Draw";
+        cout << "OOps! :/\nGame Draw";
 
     _getche();
 
